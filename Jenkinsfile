@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('docker build') {
             steps {
-              echo '$(whoami)'
+              sh 'whoami'
                 sh "docker build -t aminellouze/appang:${env.BUILD_NUMBER} . "
             }
         }
