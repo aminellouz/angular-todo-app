@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('docker build') {
             steps {
-                sh "docker build -t aminellouze/appang:${env.BUILD_NUMBER} . "
+                sh "sudo docker build -t aminellouze/appang:${env.BUILD_NUMBER} . "
             }
         }
          stage('docker push') {
